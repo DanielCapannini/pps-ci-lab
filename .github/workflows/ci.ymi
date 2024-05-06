@@ -1,4 +1,4 @@
-name: create Linux Enviroment
+name: Clone Repositery
 
 on:
   push
@@ -8,6 +8,9 @@ jobs:
     evn:
     TERM: dumb
     steps:
+      - name: Checkout
+      user: actions/checkout@v2
+      -user: joschi7setup-jdk@v2.3.o
       with:
         java-version: 15
         - name: Build
