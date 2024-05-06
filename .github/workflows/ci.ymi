@@ -1,0 +1,14 @@
+name: create Linux Enviroment
+
+on:
+  push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    evn:
+    TERM: dumb
+    steps:
+      with:
+        java-version: 15
+        - name: Build
+        run: ./gradlew build
